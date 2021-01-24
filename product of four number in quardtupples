@@ -1,0 +1,25 @@
+A non-empty zero-indexed array A consisting of N integers is given. The product of triplet (P, Q, R) equates to A[P] * A[Q] * A[R] (0 ≤ P < Q < R < N).
+#For example, array A such that:
+#  A[0] = -3
+#  A[1] = 1
+#  A[2] = 2
+#  A[3] = -2
+#  A[4] = 5
+#  A[5] = 6
+
+
+
+def max_prod(n_list):
+    if len(n_list)<4:
+        return "Invalid Input"
+    n_list=sorted(n_list)
+    print(n_list)
+    result=n_list[len(n_list)-1]*n_list[len(n_list)-2]*n_list[len(n_list)-3]*n_list[len(n_list)-4]
+    print(result)
+    result=float(result)
+    return round(result,2)
+n=int(input("How many Number you want to print"))
+result=[]
+for i in range(n):
+    result.append(int(input("Please enter Numbers : -")))
+max_prod(result)
